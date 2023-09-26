@@ -70,6 +70,10 @@ Error conditions:
 operators = {
     # Dictionary syntax:  "key" : "value"
     #   i.e. "function" : operator.<function>
+    "+" : operator.add,
+    "-" : operator.sub,
+    "*" : operator.mul,
+    "/" : operator.truediv
 }
 
 
@@ -85,14 +89,16 @@ def get_user_input():
     """
     # NOTE - Use "try"/"except" statements to allow code to handle errors gracefully.      
     try:
-        # NOTE - Use "pass" statements to allow code to be run without having to 
-        # NOTE - fill out the contents.  This pass statement should be removed    
-        pass
+        number1 = float(input("Enter first number: "))
+        number2 = float(input("Enter second number: "))
+        op = input("Enter function (valid values are +, -, *, /): ")
         
-        # NOTE - User input is generally returned as a string and must be translated.
+        func = operator.get(op)
     except:
         print("Invalid Input")
-        return (None, None, None)
+        return (None,None,None)
+
+    return (number1, number2, func)
 
 # End def
 
@@ -112,6 +118,18 @@ def get_user_input():
 # NOTE - the the "__name__" will be the module name, i.e. the string "simple_calc"
 
 if __name__ == "__main__":
+    while True:
+      (num1, num2, func) = get_user_input()
+      if (num1 == None) or (num2 == None) or (func == None)
+        print("Invalid input")
+        break
+      ans = operators[func](num1,num2)
+      print(ans)
+      return ans
+      
+
+      
+      print(func(num1, num2))
 
     # NOTE - Need to add main calculator functionality:
     # NOTE -   - Use a loop construct to repeat the operation
