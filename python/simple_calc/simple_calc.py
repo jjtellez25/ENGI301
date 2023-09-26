@@ -128,16 +128,9 @@ if __name__ == "__main__":
       return ans
       
 
-      
-      print(func(num1, num2))
-
     # NOTE - Need to add main calculator functionality:
     # NOTE -   - Use a loop construct to repeat the operation
     # NOTE -   - Get the input from the user (i.e. use function created above)    
     # NOTE -   - Check that all inputs are valid (exit the program if inputs invalid)
     # NOTE -   - Execute the function on the numbers and print the results
-
-    # NOTE - Use "pass" statements to allow code to be run without having to 
-    # NOTE - fill out the contents.  This pass statement should be removed    
-    pass
 
