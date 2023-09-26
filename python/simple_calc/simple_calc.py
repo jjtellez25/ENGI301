@@ -73,7 +73,11 @@ operators = {
     "+" : operator.add,
     "-" : operator.sub,
     "*" : operator.mul,
-    "/" : operator.truediv
+    "/" : operator.truediv,
+    ">>" : operator.rshift,
+    "<<" : operator.lshift,
+    "%" : operator.mod,
+    "**" : operator.pow
 }
 
 
@@ -89,6 +93,9 @@ def get_user_input():
     """
     # NOTE - Use "try"/"except" statements to allow code to handle errors gracefully.      
     try:
+          input = raw_input
+        except NameError:
+          pass
         number1 = float(input("Enter first number: "))
         number2 = float(input("Enter second number: "))
         op = input("Enter function (valid values are +, -, *, /): ")
