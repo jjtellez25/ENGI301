@@ -51,6 +51,7 @@ Error conditions:
 
 --------------------------------------------------------------------------
 """
+import six
 import operator
 operators = {
     "+" : operator.add,
@@ -78,9 +79,9 @@ def get_user_input():
     """
     # NOTE - Use "try"/"except" statements to allow code to handle errors gracefully.      
     try:
-        number1 = float(raw_input("Enter first number: "))
-        number2 = float(raw_input("Enter second number: "))
-        op = raw_input("Enter function (valid values are +, -, *, /, >>, <<, %, **): ")
+        number1 = float(six.moves.input("Enter first number: "))
+        number2 = float(six.moves.input("Enter second number: "))
+        op = six.moves.input("Enter function (valid values are +, -, *, /, >>, <<, %, **): ")
         func = operators.get(op)
         
         if func is None:
