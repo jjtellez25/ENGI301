@@ -51,22 +51,6 @@ Error conditions:
 
 --------------------------------------------------------------------------
 """
-
-# NOTE - Add import statements to allow access to Python library functions
-# NOTE - Hint:  Look at  https://docs.python.org/3/library/operator.html
-
-# ------------------------------------------------------------------------
-# Constants
-# ------------------------------------------------------------------------
-
-# NOTE - No constants are needed for this example 
-
-# ------------------------------------------------------------------------
-# Global variables
-# ------------------------------------------------------------------------
-
-# NOTE - Global variable to map an operator string (e.g. "+") to 
-# NOTE - the appropriate function.
 operators = {
     "+" : operator.add,
     "-" : operator.sub,
