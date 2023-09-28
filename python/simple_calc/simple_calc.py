@@ -78,15 +78,18 @@ def get_user_input():
     """
     # NOTE - Use "try"/"except" statements to allow code to handle errors gracefully.      
     try:
-          input = raw_input
-        except NameError:
-        number1 = float(input("Enter first number: "))
-        number2 = float(input("Enter second number: "))
-        op = input("Enter function (valid values are +, -, *, /, >>, <<, %, **): ")
+        number1 = float(raw_input("Enter first number: "))
+        number2 = float(raw_input("Enter second number: "))
+        op = raw_input("Enter function (valid values are +, -, *, /, >>, <<, %, **): ")
         func = operators.get(op)
-    except:
-        print("Invalid Input")
+        
+        if func is None:
+            raise ValueError("Invalid operator")
+            
+    except ValueError as e:
+        print("Invalid Input: %s" % e)
         return (None, None, None)
+    
     return (number1, number2, func)
 
 # End def
@@ -106,13 +109,12 @@ def get_user_input():
 # NOTE -   import simple_calc
 # NOTE - the the "__name__" will be the module name, i.e. the string "simple_calc"
 
-if __name__ == "__main__":
 
-    if __name__ == "__main__":
+if __name__ == "__main__":
     while True:
-      (num1, num2, func) = get_user_input()
-      if (num1 == None) or (num2 == None) or (func == None)
-        print("Invalid input")
-        break
-      ans = func(num1,num2)
-      print(ans)
+        (num1, num2, func) = get_user_input()
+        if num1 is None or num2 is None or func is None:
+            print("Invalid input")
+            break
+        ans = func(num1, num2)
+        print(ans)
