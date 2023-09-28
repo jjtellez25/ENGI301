@@ -51,6 +51,7 @@ Error conditions:
 
 --------------------------------------------------------------------------
 """
+import operator
 operators = {
     "+" : operator.add,
     "-" : operator.sub,
@@ -81,13 +82,11 @@ def get_user_input():
         except NameError:
         number1 = float(input("Enter first number: "))
         number2 = float(input("Enter second number: "))
-        op = input("Enter function (valid values are +, -, *, /): ")
-        
-        func = operator.get(op)
+        op = input("Enter function (valid values are +, -, *, /, >>, <<, %, **): ")
+        func = operators.get(op)
     except:
         print("Invalid Input")
-        return (None,None,None)
-
+        return (None, None, None)
     return (number1, number2, func)
 
 # End def
@@ -115,6 +114,5 @@ if __name__ == "__main__":
       if (num1 == None) or (num2 == None) or (func == None)
         print("Invalid input")
         break
-      ans = operators[func](num1,num2)
+      ans = func(num1,num2)
       print(ans)
-      return ans
