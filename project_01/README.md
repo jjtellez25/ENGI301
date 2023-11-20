@@ -33,5 +33,5 @@ If this does not work, the file may not be executable. Run the following line to
 
 To make the code run automatically on boot, run the following commands.
 - sudo crontab -e
-- @reboot sleep 30 && sh /var/lib/cloud9/ENGI301/project_01/run > /var/lib/cloud9/logs/cronlog 2>&1
+- @reboot sleep 30 && bash /var/lib/cloud9/ENGI301/project_01/run > /var/lib/cloud9/logs/cronlog 2>&1
 - Exit and Save
