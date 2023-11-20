@@ -11,6 +11,7 @@ The following libraries were installed for my hardware components to run properl
 <h3>RGB LCD</h3>
 
 - sudo apt-get update
+- sudo pip3 install Adafruit_BBIO
 - sudo pip3 install adafruit-blinka
 - sudo pip3 install adafruit-circuitpython-charlcd
 
