@@ -1,1 +1,3 @@
-Project 2
+<h1>Safe and Sound Vault PCB</h1>
+<h2>Brief Project Background</h2>
+If you were searching for the latest, most secure, state-of-the-art safe, look no further than the FingerLock Fortress 3000. Built out of the strongest material on earth (wood), the FingerSafe Fortress 3000 is the latest and most innovative solution that guarantees 24/7 protection of any valuables! Using fingerprint recognition, you don't have to worry about remembering a code to access the safe, rather simply enroll your fingerprint and access any valuables knowing only enrolled users can access the safe. This project will focus on building the PCB rather than the safe itself, refer to project_01 folder for project build instructions.
